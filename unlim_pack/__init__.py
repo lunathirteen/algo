@@ -15,15 +15,22 @@ from typing import List
 
 
 def unlim_pack(W: int, items: List[int]) -> float:
+
     items.sort(key=lambda i: i[0]/i[1], reverse=True)
     i = 0
     n = len(items)
     total_cost = 0.0
-    while W is not 0 and i <= n:
-        total_cost += items[i][0]
-        W -= items[i][1]
+    while W is not 0 and i < n:
+        w_i = items[i][1]
+        c_i = items[i][0]
+        if w_i <= W:
+            W -= w_i
+            total_cost += c_i
+        else:
+            total_cost += c_i * W / w_i
+        i += 1
 
-    return items
+    return total_cost
 
 
 def main():
@@ -35,7 +42,7 @@ def main():
         items.append(item)
 
     result = unlim_pack(W, items)
-    print(result)
+    print(round(result, 3))
 
 
 if __name__ == "__main__":

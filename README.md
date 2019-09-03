@@ -9,3 +9,4 @@
 * [Наибольший общий делитель](https://stepik.org/lesson/13229/step/5) -> [gcd](https://github.com/lunathirteen/algo/tree/master/gcd)
 #### Жадные алгоритмы
 * [Покрыть отрезки точками](https://stepik.org/lesson/13238/step/9) -> [coverpoint](https://github.com/lunathirteen/algo/tree/master/coverpoint)
+* [Непрерывный рюкзак](https://stepik.org/lesson/13238/step/10) -> [unlim_pack](https://github.com/lunathirteen/algo/tree/master/unlim_pack)
