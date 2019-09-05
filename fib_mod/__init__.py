@@ -17,5 +17,3 @@ def fib_mod(n, m):
             break
 
     return estimates[:-2][n % len(estimates[:-2])]
-
-print(fib_mod(10, 1))

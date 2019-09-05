@@ -9,14 +9,21 @@
 
 
 def addends(n):
-    addends = []
+    array = []
+    i = 1
+    while n - i >= 0:
+        n -= i
+        array.append(i)
+        i += 1
+    if n % array[-1] >= 0:
+        array[-1] += n
 
-    return addends
+    return array
 
 
 def main():
 
-    n = input().split()
+    n = int(input())
 
     result = addends(n)
     print(result)
