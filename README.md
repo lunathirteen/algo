@@ -17,3 +17,4 @@
 
 #### Рекурсия
 * Рекурсивная сумма -> [recsum](https://github.com/lunathirteen/algo/tree/master/recsum)
+* Рекурсивный подсчёт элементов в списке -> [reccount](https://github.com/lunathirteen/algo/tree/master/reccount)
