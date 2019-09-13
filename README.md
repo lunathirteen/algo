@@ -18,3 +18,4 @@
 #### Рекурсия
 * Рекурсивная сумма -> [recsum](https://github.com/lunathirteen/algo/tree/master/recsum)
 * Рекурсивный подсчёт элементов в списке -> [reccount](https://github.com/lunathirteen/algo/tree/master/reccount)
+* Рекурсивное нахождение максимума -> [rec_max](https://github.com/lunathirteen/algo/tree/master/rec_max)
