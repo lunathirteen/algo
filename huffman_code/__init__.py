@@ -14,15 +14,18 @@ from collections import Counter
 def huffman_code(s):
 
     freq = Counter(s)
-    freq_array = list(freq.values()).sort()
-    tree = {}
+    tree = OrderedDict()
+    temp = {}
 
-    while len(freq_array) > 1:
-        f_i = freq_array.pop(0)
-        f_j = freq_array.pop(0)
-        node = f_i + f_j
-        tree[node] = (f_i, f_j)
-        freq_array.append(node)
-        freq_array.sort()
+    while len(freq) > 1:
+        min_key_i = min(freq, key=freq.get)
+        F_i = freq.pop(min_key_i, None)
+        temp[min_key_i] = F_i
+        min_key_j = min(freq, key=freq.get)
+        F_j = freq.pop(min_key_j, None)
+        temp[min_key_j] = F_j
+        node = min_key_i + min_key_j
+        freq[node] = F_i + F_j
+        tree[node] = [min_key_i, min_key_j]
 
     return tree
