@@ -9,9 +9,12 @@
 В последней строке выведите закодированную строку.
 """
 from collections import Counter
+from typing import Dict
+
+Codes = Dict[str, str]
 
 
-def build_tree(s):
+def build_tree(s: str) -> tuple:
 
     freq = sorted(Counter(s).items(), key=lambda pair: pair[1], reverse=False)
 
@@ -25,18 +28,39 @@ def build_tree(s):
     return freq[0][0]
 
 
-def walk_tree(tree, current_code='', codes={}):
+def walk_tree(tree: tuple, current_code: str = '', codes: Codes = {}) -> Codes:
 
-    if type(tree[0]) == tuple:
-        walk_tree(tree[0], current_code + '0', codes)
-    else:
+    if len(tree) == 1:
         codes[tree[0]] = current_code + '0'
-    if type(tree[1]) == tuple:
-        walk_tree(tree[1], current_code + '1', codes)
     else:
-        codes[tree[1]] = current_code + '1'
+        if type(tree[0]) == tuple:
+            walk_tree(tree[0], current_code + '0', codes)
+        else:
+            codes[tree[0]] = current_code + '0'
+        if type(tree[1]) == tuple:
+            walk_tree(tree[1], current_code + '1', codes)
+        else:
+            codes[tree[1]] = current_code + '1'
 
-    return(codes)
+    return codes
 
-tree = build_tree(s)
-huff = walk_tree(tree)
+
+def huffman_encode(s: str) -> None:
+    tree = build_tree(s)
+    codes = walk_tree(tree)
+    encoded_string = ''.join(codes[letter] for letter in s)
+    return codes, encoded_string
+
+
+def main():
+
+    s = input()
+
+    codes_dict, string = huffman_encode(s)
+    print(len(codes_dict), len(string))
+    for k, v in codes_dict.items():
+        print('{}: {}'.format(k, v))
+    print(string)
+
+if __name__ == "__main__":
+    main()
