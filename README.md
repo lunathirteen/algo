@@ -12,6 +12,7 @@
 * Непрерывный рюкзак [описание](https://stepik.org/lesson/13238/step/10) -> [unlim_pack](https://github.com/lunathirteen/algo/tree/master/unlim_pack)
 * Различные слагаемые [описание](https://stepik.org/lesson/13238/step/11) -> [addends](https://github.com/lunathirteen/algo/tree/master/addends)
 * Кодирование Хаффмана [описание](https://stepik.org/lesson/13239/step/5) -> [huffman_encode](https://github.com/lunathirteen/algo/tree/master/huffman_encode)
+* Декодирование Хаффмана [описание](https://stepik.org/lesson/13239/step/6) -> [huffman_encode](https://github.com/lunathirteen/algo/tree/master/huffman_decode)
 
 ## Книга "Грокаем алгоритмы". Практика
 [ИД Питер](https://www.piter.com/collection/all/product/grokaem-algoritmy-illyustrirovannoe-posobie-dlya-programmistov-i-lyubopytstvuyuschih-2)
