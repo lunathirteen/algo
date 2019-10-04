@@ -41,3 +41,17 @@ class PriorityQueue:
         self.heap_size -= 1
         self._heapify(self.array, 0)
         return max_element
+
+if __name__ == "__main__":
+    
+    n = int(input())
+
+    a = PriorityQueue()
+
+    for i in range(n):
+        try:
+            action, element = input().split(" ")
+            a.insert(element)
+        except ValueError:
+            max_element = a.extract_max()
+            print(max_element)
