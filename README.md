@@ -17,6 +17,9 @@
 * Декодирование Хаффмана [описание](https://stepik.org/lesson/13239/step/6) -> [huffman_decode](https://github.com/lunathirteen/algo/tree/master/huffman_decode/__init__.py)
 * Очередь с приоритетами [описание](https://stepik.org/lesson/13240/step/8) -> [priority_queue](https://github.com/lunathirteen/algo/tree/master/priority_queue/__init__.py)
 
+#### "Разделяй и властвуй"
+* Двоичный поиск [описание](https://stepik.org/lesson/13246/step/4) -> [binary_search](https://github.com/lunathirteen/algo/tree/master/binary_search/__init__.py)
+
 ## Книга "Грокаем алгоритмы". Практика
 [ИД Питер](https://www.piter.com/collection/all/product/grokaem-algoritmy-illyustrirovannoe-posobie-dlya-programmistov-i-lyubopytstvuyuschih-2)
 
