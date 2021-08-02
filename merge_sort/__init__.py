@@ -7,9 +7,10 @@
 например, в упорядоченном по неубыванию массиве инверсий нет вообще,
 а в массиве, упорядоченном по убыванию, инверсию образуют каждые два элемента.)
 """
+from typing import List
 
 
-def merge_sort(array):
+def merge_sort(array: List) -> None:
     if len(array) > 1:
         m = (len(array)) // 2
 
@@ -37,49 +38,38 @@ def merge_sort(array):
     return array
 
 
-def _merge(l_array, r_array):
-    sorted_array = []
-    i = 0
-    j = 0
-    while i < len(l_array) and j < len(r_array):
-        if l_array[i] <= r_array[j]:
-            sorted_array.append(l_array[i])
-            i += 1
-        else:
-            sorted_array.append(r_array[j])
-            j += 1
-
-    if i >= len(l_array):
-        sorted_array += r_array[j:]
-    elif j >= len(r_array):
-        sorted_array += l_array[i:]
-
-    return sorted_array
-
-
-def merge_sort_inv(array, invariants=0):
-
+def merge_sort_inv(array: List) -> int:
     if len(array) > 1:
         m = (len(array)) // 2
 
         l_array = array[:m]
         r_array = array[m:]
-        invariants += merge_sort_inv(l_array, invariants)
-        invariants += merge_sort_inv(r_array, invariants)
+        l_inv = merge_sort_inv(l_array)
+        r_inv = merge_sort_inv(r_array)
         i = 0
         j = 0
         k = 0
+        inversion = 0 + l_inv + r_inv
         while i < len(l_array) and j < len(r_array):
             if l_array[i] <= r_array[j]:
                 array[k] = l_array[i]
                 i += 1
             else:
                 array[k] = r_array[j]
-                invariants += 1
                 j += 1
+                inversion += len(l_array) - i
             k += 1
 
         if i >= len(l_array):
             array[k:] = r_array[j:]
         elif j >= len(r_array):
             array[k:] = l_array[i:]
+        return inversion
+    return 0
+
+
+if __name__ == "__main__":
+    n = input().split()
+    input_string = input().split()
+    array = [int(el) for el in input_string]
+    print(merge_sort_inv(array))
