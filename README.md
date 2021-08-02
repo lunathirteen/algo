@@ -19,6 +19,7 @@
 
 #### "Разделяй и властвуй"
 * Двоичный поиск [описание](https://stepik.org/lesson/13246/step/4) -> [binary_search](https://github.com/lunathirteen/algo/tree/master/binary_search/__init__.py)
+* Сортировка слиянием [описание](https://stepik.org/lesson/13248/step/5) -> [merge_sort](https://github.com/lunathirteen/algo/tree/master/merge_sort/__init__.py)
 
 ## Книга "Грокаем алгоритмы". Практика
 [ИД Питер](https://www.piter.com/collection/all/product/grokaem-algoritmy-illyustrirovannoe-posobie-dlya-programmistov-i-lyubopytstvuyuschih-2)
